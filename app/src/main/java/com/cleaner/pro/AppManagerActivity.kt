@@ -71,8 +71,7 @@ class AppManagerActivity : BaseActivity() {
         root.addView(row2)
 
         val rv = RecyclerView(this).apply { layoutManager = LinearLayoutManager(context) }
-        adapter = AppListAdapter(apps) { app, action -> handleAction(app, action) }
-        { updateSelBar() }
+        adapter = AppListAdapter(apps, { app, action -> handleAction(app, action) }) { updateSelBar() }
         rv.adapter = adapter
         root.addView(rv, LinearLayout.LayoutParams(-1, 0, 1f))
 
