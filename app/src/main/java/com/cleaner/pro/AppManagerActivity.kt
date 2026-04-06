@@ -1,3 +1,4 @@
+package com.cleaner.pro
 import android.app.ActivityManager
 import android.content.Intent
 import android.content.res.ColorStateList
